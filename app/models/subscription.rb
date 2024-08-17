@@ -9,5 +9,5 @@ class Subscription < ApplicationRecord
   validates :frequency, presence: true
 
   enum status: { active: 0, cancelled: 1 } 
-  enum frequency: { weekly: 0, monthly: 1 } 
+  enum frequency: { monthly: 0, weekly: 1, biweekly: 2 } 
 end
