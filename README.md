@@ -116,6 +116,7 @@ Description: Retrieves all of a customer's subscriptions, both active and cancel
 GET "http://localhost:3000/api/v1/customers/1/subscriptions"
 
 Response:
+```
 {
   "data": [
     {
@@ -152,7 +153,7 @@ Response:
     }
   ]
 }
-
+```
 
 
 ## Authors
