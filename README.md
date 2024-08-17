@@ -53,16 +53,18 @@ Description: Creates a new subscription for a customer.
 ex:
 POST "http://localhost:3000/api/v1/customers/1/subscriptions"
 
-Body:
+Request Body:
+```
 {
   "title": "Monthly Jasmine Tea",
   "price": 10000,
   "status": "active",
   "frequency": 0,
   "tea_id": 1
-}'
-
+}
+```
 Response:
+```
 {
   "data": {
     "id": 1,
@@ -81,13 +83,13 @@ Response:
     }
   }
 }
-
+```
 ### Cancel a Customer’s Tea Subscription
 Endpoint: PATCH /api/v1/customers/:customer_id/subscriptions/:id \
 Description: Updates a subscription status to cancelled.
 
 PATCH "http://localhost:3000/api/v1/customers/1/subscriptions/1?status=cancelled" 
-
+```
 {
   "data": {
     "id": 1,
@@ -106,7 +108,7 @@ PATCH "http://localhost:3000/api/v1/customers/1/subscriptions/1?status=cancelled
     }
   }
 }
-
+```
 ### Get All Subscriptions for a Customer
 Endpoint: GET /api/v1/customers/:customer_id/subscriptions \
 Description: Retrieves all of a customer's subscriptions, both active and cancelled.
