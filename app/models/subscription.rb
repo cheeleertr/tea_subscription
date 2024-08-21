@@ -7,5 +7,7 @@ class Subscription < ApplicationRecord
   enum frequency: { monthly: 0, weekly: 1, biweekly: 2 } 
 
   validates :title, presence: true
+  validates :frequency, presence: true
+  validates :status, presence: true
   validates :price, presence: true, numericality: { greater_than: 0 }
 end
